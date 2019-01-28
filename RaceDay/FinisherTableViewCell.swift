@@ -9,11 +9,16 @@
 import UIKit
 
 class FinisherTableViewCell: UITableViewCell {
-    let nameLabel = UILabel()
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var clubLabel: UILabel!
+  @IBOutlet weak var numberLabel: UILabel!
+  @IBOutlet weak var positionLabel: UILabel!
+  @IBOutlet weak var clubImage: UIImageView!
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setUpLayout()
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,9 +27,6 @@ class FinisherTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUpLayout() {
 
-        self.addSubview(nameLabel)
-    }
     
 }

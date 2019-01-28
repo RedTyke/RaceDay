@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2082B5B921F383E30076DE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5B821F383E30076DE6B /* AppDelegate.swift */; };
 		2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5BA21F383E30076DE6B /* FinishersViewController.swift */; };
 		2082B5BE21F383E30076DE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5BC21F383E30076DE6B /* Main.storyboard */; };
-		2082B5C021F383E50076DE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5BF21F383E50076DE6B /* Assets.xcassets */; };
 		2082B5C321F383E50076DE6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */; };
 		2082B5CB21F3842B0076DE6B /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5CA21F3842B0076DE6B /* Runner.swift */; };
+		20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21F3121FDD283002518AD /* FinishersDataSource.swift */; };
+		20B21F3421FDF079002518AD /* AssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B21F3321FDF079002518AD /* AssetCatalog.xcassets */; };
+		20B60E1721F4E8E100348DB3 /* WYWLRunnersJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */; };
+		20B60E1C21F4E91000348DB3 /* runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1821F4E90F00348DB3 /* runner.swift */; };
+		20B60E1D21F4E91000348DB3 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1921F4E90F00348DB3 /* enums.swift */; };
+		20B60E1E21F4E91000348DB3 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1A21F4E90F00348DB3 /* race.swift */; };
+		20B60E1F21F4E91000348DB3 /* league.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1B21F4E90F00348DB3 /* league.swift */; };
 		527EF39F21F4D94D007AFCAD /* FinisherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */; };
 		527EF3A021F4D94D007AFCAD /* FinisherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527EF39E21F4D94D007AFCAD /* FinisherTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -22,10 +28,16 @@
 		2082B5B821F383E30076DE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2082B5BA21F383E30076DE6B /* FinishersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersViewController.swift; sourceTree = "<group>"; };
 		2082B5BD21F383E30076DE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2082B5BF21F383E50076DE6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2082B5C221F383E50076DE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2082B5C421F383E50076DE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2082B5CA21F3842B0076DE6B /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
+		20B21F3121FDD283002518AD /* FinishersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersDataSource.swift; sourceTree = "<group>"; };
+		20B21F3321FDF079002518AD /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = "<group>"; };
+		20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WYWLRunnersJSON.json; sourceTree = "<group>"; };
+		20B60E1821F4E90F00348DB3 /* runner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = runner.swift; path = "../../../Baildon Runners/WYWL/WYWL_RaceDay.playground/Sources/runner.swift"; sourceTree = "<group>"; };
+		20B60E1921F4E90F00348DB3 /* enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		20B60E1A21F4E90F00348DB3 /* race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
+		20B60E1B21F4E90F00348DB3 /* league.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = league.swift; sourceTree = "<group>"; };
 		527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinisherTableViewCell.swift; sourceTree = "<group>"; };
 		527EF39E21F4D94D007AFCAD /* FinisherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinisherTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,14 +72,20 @@
 		2082B5B721F383E30076DE6B /* RaceDay */ = {
 			isa = PBXGroup;
 			children = (
+				2082B5B821F383E30076DE6B /* AppDelegate.swift */,
+				20B21F3121FDD283002518AD /* FinishersDataSource.swift */,
 				527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */,
 				527EF39E21F4D94D007AFCAD /* FinisherTableViewCell.xib */,
-				2082B5B821F383E30076DE6B /* AppDelegate.swift */,
 				2082B5BA21F383E30076DE6B /* FinishersViewController.swift */,
 				2082B5CA21F3842B0076DE6B /* Runner.swift */,
 				2082B5BC21F383E30076DE6B /* Main.storyboard */,
-				2082B5BF21F383E50076DE6B /* Assets.xcassets */,
+				20B21F3321FDF079002518AD /* AssetCatalog.xcassets */,
 				2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */,
+				20B60E1921F4E90F00348DB3 /* enums.swift */,
+				20B60E1B21F4E90F00348DB3 /* league.swift */,
+				20B60E1A21F4E90F00348DB3 /* race.swift */,
+				20B60E1821F4E90F00348DB3 /* runner.swift */,
+				20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */,
 				2082B5C421F383E50076DE6B /* Info.plist */,
 			);
 			path = RaceDay;
@@ -109,7 +127,7 @@
 				};
 			};
 			buildConfigurationList = 2082B5B021F383E30076DE6B /* Build configuration list for PBXProject "RaceDay" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,8 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2082B5C321F383E50076DE6B /* LaunchScreen.storyboard in Resources */,
+				20B21F3421FDF079002518AD /* AssetCatalog.xcassets in Resources */,
 				527EF3A021F4D94D007AFCAD /* FinisherTableViewCell.xib in Resources */,
-				2082B5C021F383E50076DE6B /* Assets.xcassets in Resources */,
+				20B60E1721F4E8E100348DB3 /* WYWLRunnersJSON.json in Resources */,
 				2082B5BE21F383E30076DE6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,8 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2082B5CB21F3842B0076DE6B /* Runner.swift in Sources */,
+				20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */,
 				527EF39F21F4D94D007AFCAD /* FinisherTableViewCell.swift in Sources */,
+				20B60E1F21F4E91000348DB3 /* league.swift in Sources */,
 				2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */,
+				20B60E1C21F4E91000348DB3 /* runner.swift in Sources */,
+				20B60E1E21F4E91000348DB3 /* race.swift in Sources */,
+				20B60E1D21F4E91000348DB3 /* enums.swift in Sources */,
 				2082B5B921F383E30076DE6B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

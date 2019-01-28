@@ -8,20 +8,31 @@
 
 import UIKit
 
-class FinishersViewController: UITableViewController {
+class FinishersViewController: UITableViewController, UISearchResultsUpdating {
 
-  var finishers = [Runner]()
+  let dataSource = FinishersDataSource()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     registerTableViewCells()
     
-    
-    finishers.append(Runner(name: "J McNiffe"))
-    finishers.append(Runner(name: "L Kaznowski"))
+    tableView.dataSource = dataSource
+  
     navigationItem.title = "Finishers"
+    navigationItem.hidesSearchBarWhenScrolling = false
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(EditFinishers))
     
+    let search = UISearchController(searchResultsController: nil)
+    search.searchResultsUpdater = self
+    search.obscuresBackgroundDuringPresentation = false
+    search.searchBar.placeholder = "Type something to search here"
+    navigationItem.searchController = search
+    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
   }
     
     func registerTableViewCells() {
@@ -29,23 +40,29 @@ class FinishersViewController: UITableViewController {
         self.tableView.register(finisherCell, forCellReuseIdentifier: "FinisherTableViewCell")
     }
 
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return finishers.count
-  }
-  
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "FinisherTableViewCell", for: indexPath) as! FinisherTableViewCell
-    let finisher = finishers[indexPath.row]
-    cell.nameLabel.text = finisher.name
-    
-    return cell
-    
-  }
   
   @objc func EditFinishers() {
     print("Allow adjustment of finishing order")
     // need to change datamodel as well as displayed table
   }
   
+  // FIX: Move out of viewcontroller
+  func updateSearchResults(for searchController: UISearchController) {
+    if let text = searchController.searchBar.text, text.count > 0 {
+      dataSource.filteredRunnerOrder = dataSource.runnerOrder.filter {
+        $0.firstName.localizedCaseInsensitiveContains(text)
+        || $0.lastName.localizedCaseInsensitiveContains(text)
+        || $0.club.rawValue.localizedCaseInsensitiveContains(text)
+        || $0.sex.rawValue.localizedCaseInsensitiveContains(text)
+        || $0.ageClass.competition().rawValue.localizedCaseInsensitiveContains(text)
+        
+      }
+    } else {
+        dataSource.filteredRunnerOrder = dataSource.runnerOrder
+      }
+  tableView.reloadData()
+  }
+
+    
 }
 

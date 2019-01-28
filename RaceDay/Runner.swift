@@ -8,11 +8,15 @@
 
 import Foundation
 
-class Runner {
+class RunnerTemp {
   var name: String
+  var number: Int
+  var club: ClubName
   
-  init(name: String) {
+  init(name: String, number: Int, club: ClubName) {
     self.name = name
+    self.number = number
+    self.club = club
   }
   
 }
