@@ -18,6 +18,7 @@
 		20327A11220753C4007CE1C2 /* CountersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */; };
 		20327A1322075779007CE1C2 /* South_Leeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 20327A1222075779007CE1C2 /* South_Leeds.json */; };
 		20327A17220758F4007CE1C2 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A16220758F4007CE1C2 /* SetUpViewController.swift */; };
+		20327A19220790B3007CE1C2 /* runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A18220790B3007CE1C2 /* runner.swift */; };
 		2082B5B921F383E30076DE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5B821F383E30076DE6B /* AppDelegate.swift */; };
 		2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5BA21F383E30076DE6B /* FinishersViewController.swift */; };
 		2082B5BE21F383E30076DE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5BC21F383E30076DE6B /* Main.storyboard */; };
@@ -25,7 +26,6 @@
 		20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21F3121FDD283002518AD /* FinishersDataSource.swift */; };
 		20B21F3421FDF079002518AD /* AssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B21F3321FDF079002518AD /* AssetCatalog.xcassets */; };
 		20B60E1721F4E8E100348DB3 /* WYWLRunnersJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */; };
-		20B60E1C21F4E91000348DB3 /* runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1821F4E90F00348DB3 /* runner.swift */; };
 		20B60E1D21F4E91000348DB3 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1921F4E90F00348DB3 /* enums.swift */; };
 		20B60E1E21F4E91000348DB3 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1A21F4E90F00348DB3 /* race.swift */; };
 		20B60E1F21F4E91000348DB3 /* league.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1B21F4E90F00348DB3 /* league.swift */; };
@@ -44,6 +44,7 @@
 		20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersTableViewCell.swift; sourceTree = "<group>"; };
 		20327A1222075779007CE1C2 /* South_Leeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = South_Leeds.json; sourceTree = "<group>"; };
 		20327A16220758F4007CE1C2 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		20327A18220790B3007CE1C2 /* runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runner.swift; sourceTree = "<group>"; };
 		2082B5B521F383E30076DE6B /* RaceDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2082B5B821F383E30076DE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2082B5BA21F383E30076DE6B /* FinishersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		20B21F3121FDD283002518AD /* FinishersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersDataSource.swift; sourceTree = "<group>"; };
 		20B21F3321FDF079002518AD /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = "<group>"; };
 		20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WYWLRunnersJSON.json; sourceTree = "<group>"; };
-		20B60E1821F4E90F00348DB3 /* runner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = runner.swift; path = "../../../Baildon Runners/WYWL/WYWL_RaceDay.playground/Sources/runner.swift"; sourceTree = "<group>"; };
 		20B60E1921F4E90F00348DB3 /* enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
 		20B60E1A21F4E90F00348DB3 /* race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
 		20B60E1B21F4E90F00348DB3 /* league.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = league.swift; sourceTree = "<group>"; };
@@ -100,7 +100,6 @@
 				20B21F3321FDF079002518AD /* AssetCatalog.xcassets */,
 				2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */,
 				20B60E1921F4E90F00348DB3 /* enums.swift */,
-				20B60E1821F4E90F00348DB3 /* runner.swift */,
 				20B60E1A21F4E90F00348DB3 /* race.swift */,
 				203040B522060B1400D1CCA2 /* result.swift */,
 				20B60E1B21F4E90F00348DB3 /* league.swift */,
@@ -114,6 +113,7 @@
 				20327A0E2207539F007CE1C2 /* CountersTableViewController.swift */,
 				20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */,
 				20327A16220758F4007CE1C2 /* SetUpViewController.swift */,
+				20327A18220790B3007CE1C2 /* runner.swift */,
 			);
 			path = RaceDay;
 			sourceTree = "<group>";
@@ -193,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20327A19220790B3007CE1C2 /* runner.swift in Sources */,
 				203040B422060A9300D1CCA2 /* ScoreModel.swift in Sources */,
 				20327A17220758F4007CE1C2 /* SetUpViewController.swift in Sources */,
 				20327A0F2207539F007CE1C2 /* CountersTableViewController.swift in Sources */,
@@ -203,7 +204,6 @@
 				20B60E1F21F4E91000348DB3 /* league.swift in Sources */,
 				2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */,
 				20327A05220739A1007CE1C2 /* Bundle-Decoding.swift in Sources */,
-				20B60E1C21F4E91000348DB3 /* runner.swift in Sources */,
 				20B60E1E21F4E91000348DB3 /* race.swift in Sources */,
 				20327A11220753C4007CE1C2 /* CountersTableViewCell.swift in Sources */,
 				20B60E1D21F4E91000348DB3 /* enums.swift in Sources */,
