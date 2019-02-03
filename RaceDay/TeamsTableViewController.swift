@@ -36,9 +36,6 @@ class TeamsTableViewController: UITableViewController, UISearchResultsUpdating, 
       search.searchBar.scopeButtonTitles = ["Overall","Men","Women","Vets","Super Vets"]
       search.searchBar.delegate = self
       navigationItem.searchController = search
-      
-      
- 
     }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +59,6 @@ class TeamsTableViewController: UITableViewController, UISearchResultsUpdating, 
     cell.pointsLabel.text = String(result.points)
     cell.clubImage.image = UIImage(named: result.club.rawValue) ?? UIImage(named: "default")
 
-    
     return cell
   }
   

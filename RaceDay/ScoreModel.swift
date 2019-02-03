@@ -128,12 +128,24 @@ class ScoreModel {
   }
   
   
+  func getOverallResult() -> [ClubResult] {
+    var overallResult = [ClubResult]()
+    
+    for club in ClubName.allCases {
+      var overallScore = 0
+    for result in table where result.club == club && ( result.comp == Competition.openMale || result.comp == Competition.openFemale ) {
+        overallScore += result.points
+      }
+      overallResult.append(ClubResult(club: club, comp: Competition.openMale ,points: overallScore))
+    }
+    return overallResult
+  }
+  
   func getTeamResult(_ comp: TeamResult) -> [ClubResult] {
+    
     switch comp {
     case .overall:
-      let tableFiltered = table.filter { $0.comp == Competition.openMale || $0.comp == Competition.openFemale }
-      // combine male and female scores - showing double list!!!
-      
+      let tableFiltered = getOverallResult()
       let sortedTable = tableFiltered.sorted { $0.points > $1.points }
       return sortedTable
     case .male:
