@@ -22,7 +22,6 @@
 		2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5BA21F383E30076DE6B /* FinishersViewController.swift */; };
 		2082B5BE21F383E30076DE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5BC21F383E30076DE6B /* Main.storyboard */; };
 		2082B5C321F383E50076DE6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */; };
-		2082B5CB21F3842B0076DE6B /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5CA21F3842B0076DE6B /* Runner.swift */; };
 		20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21F3121FDD283002518AD /* FinishersDataSource.swift */; };
 		20B21F3421FDF079002518AD /* AssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B21F3321FDF079002518AD /* AssetCatalog.xcassets */; };
 		20B60E1721F4E8E100348DB3 /* WYWLRunnersJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */; };
@@ -51,7 +50,6 @@
 		2082B5BD21F383E30076DE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2082B5C221F383E50076DE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2082B5C421F383E50076DE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2082B5CA21F3842B0076DE6B /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		20B21F3121FDD283002518AD /* FinishersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersDataSource.swift; sourceTree = "<group>"; };
 		20B21F3321FDF079002518AD /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = "<group>"; };
 		20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WYWLRunnersJSON.json; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */,
 				203040AF2205709F00D1CCA2 /* TeamsTableViewController.swift */,
 				203040B12206034E00D1CCA2 /* TeamsTableViewCell.swift */,
-				2082B5CA21F3842B0076DE6B /* Runner.swift */,
 				2082B5BC21F383E30076DE6B /* Main.storyboard */,
 				20B21F3321FDF079002518AD /* AssetCatalog.xcassets */,
 				2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */,
@@ -200,7 +197,6 @@
 				20327A17220758F4007CE1C2 /* SetUpViewController.swift in Sources */,
 				20327A0F2207539F007CE1C2 /* CountersTableViewController.swift in Sources */,
 				203040B622060B1400D1CCA2 /* result.swift in Sources */,
-				2082B5CB21F3842B0076DE6B /* Runner.swift in Sources */,
 				20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */,
 				203040B02205709F00D1CCA2 /* TeamsTableViewController.swift in Sources */,
 				527EF39F21F4D94D007AFCAD /* FinisherTableViewCell.swift in Sources */,
