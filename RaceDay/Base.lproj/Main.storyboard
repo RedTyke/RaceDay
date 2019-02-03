@@ -157,13 +157,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TeamCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamCell" id="2Ex-Nz-GJX" customClass="TeamsTableViewCell" customModule="RaceDay" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamsTableViewCell" id="2Ex-Nz-GJX" customClass="TeamsTableViewCell" customModule="RaceDay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Ex-Nz-GJX" id="Czb-Ol-S3c">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-ic-E3z">
+                                            <rect key="frame" x="16" y="12" width="32" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMT-LS-kpf">
+                                            <rect key="frame" x="56" y="11" width="147" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWg-A4-UXw">
+                                            <rect key="frame" x="314" y="12" width="53" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eee-cX-EUG">
+                                            <rect key="frame" x="211" y="3" width="36" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="clubImage" destination="eee-cX-EUG" id="yep-VP-se8"/>
+                                    <outlet property="clubNameLabel" destination="MMT-LS-kpf" id="j5n-X2-V2b"/>
+                                    <outlet property="pointsLabel" destination="rWg-A4-UXw" id="sdC-ao-OQc"/>
+                                    <outlet property="positionLabel" destination="r0f-ic-E3z" id="ypQ-rV-Tkm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -171,12 +204,11 @@
                             <outlet property="delegate" destination="9Og-RA-AlM" id="uRh-2t-1ub"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="Sdi-JG-LRb"/>
                     <navigationItem key="navigationItem" id="7f6-Aj-JHP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBM-dk-rJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="-926.08695652173924"/>
+            <point key="canvasLocation" x="1736.8" y="-926.08695652173924"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RcX-gN-foY">
@@ -191,7 +223,7 @@
                     <connections>
                         <segue destination="cyz-6z-oR7" kind="relationship" relationship="viewControllers" id="PK8-UB-HcM"/>
                         <segue destination="Aaf-gE-YlP" kind="relationship" relationship="viewControllers" id="Rb1-YX-xyz"/>
-                        <segue destination="9Og-RA-AlM" kind="relationship" relationship="viewControllers" id="RAT-xY-tb3"/>
+                        <segue destination="fEl-cz-scO" kind="relationship" relationship="viewControllers" id="RAT-xY-tb3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvU-SI-S6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,6 +248,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrR-YV-5Wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="797.60000000000002" y="775.86206896551732"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zuK-yw-a14">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fEl-cz-scO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Sdi-JG-LRb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KLN-JO-djx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Og-RA-AlM" kind="relationship" relationship="rootViewController" id="Omw-qn-SBd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPi-2X-Ebj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="-926.08695652173924"/>
         </scene>
     </scenes>
     <resources>

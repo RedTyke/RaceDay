@@ -10,6 +10,13 @@ import UIKit
 
 class TeamsTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var positionLabel: UILabel!
+  @IBOutlet weak var clubNameLabel: UILabel!
+  @IBOutlet weak var pointsLabel: UILabel!
+  @IBOutlet weak var clubImage: UIImageView!
+  
+  
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

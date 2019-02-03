@@ -6,6 +6,10 @@ public enum Competition: String, Codable, CaseIterable {
   case openMale, openFemale, vet, supervet
 }
 
+public enum TeamResult: String, Codable, CaseIterable {
+  case overall, male, female, vet, supervet
+}
+
 public enum CounterCheck: String, Codable, CaseIterable {
   case vet, female
 }

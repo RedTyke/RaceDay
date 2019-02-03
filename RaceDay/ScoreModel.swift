@@ -11,10 +11,17 @@ import Foundation
 class ScoreModel {
   
   // FIX: create initialiser that runs all required steps to give output of result tables
-  
+  // FIX:  Only want to do this once the race is complete....should be triggered by user changing status of race to COMPLETE.....results tab should be greyed out and not selectable until this point
+  var runnerData = FinishersDataSource()
   
   var counterResults: [CompResult] = []
   var table: [ClubResult] = []
+  var runnerResult = [Result]()
+
+  init() {
+    
+    scoreClubs(runnerResults: runnerData.runnerResult)
+  }
   
   func scoreClubs(runnerResults: [Result]) {
     for club in ClubName.allCases {
@@ -118,6 +125,34 @@ class ScoreModel {
       
     }
     
+  }
+  
+  
+  func getTeamResult(_ comp: TeamResult) -> [ClubResult] {
+    switch comp {
+    case .overall:
+      let tableFiltered = table.filter { $0.comp == Competition.openMale || $0.comp == Competition.openFemale }
+      // combine male and female scores - showing double list!!!
+      
+      let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+      return sortedTable
+    case .male:
+      let tableFiltered = table.filter { $0.comp == Competition.openMale }
+      let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+      return sortedTable
+    case .female:
+      let tableFiltered = table.filter { $0.comp == Competition.openFemale }
+      let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+      return sortedTable
+   case .vet:
+    let tableFiltered = table.filter { $0.comp == Competition.vet }
+    let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+    return sortedTable
+   case .supervet:
+    let tableFiltered = table.filter { $0.comp == Competition.supervet }
+    let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+    return sortedTable
+    }
   }
   
   
