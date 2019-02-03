@@ -14,6 +14,10 @@
 		20327A05220739A1007CE1C2 /* Bundle-Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A04220739A1007CE1C2 /* Bundle-Decoding.swift */; };
 		20327A0B220740E6007CE1C2 /* Queensbury.json in Resources */ = {isa = PBXBuildFile; fileRef = 20327A0A220740E6007CE1C2 /* Queensbury.json */; };
 		20327A0D2207418C007CE1C2 /* Pudsey.json in Resources */ = {isa = PBXBuildFile; fileRef = 20327A0C2207418C007CE1C2 /* Pudsey.json */; };
+		20327A0F2207539F007CE1C2 /* CountersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A0E2207539F007CE1C2 /* CountersTableViewController.swift */; };
+		20327A11220753C4007CE1C2 /* CountersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */; };
+		20327A1322075779007CE1C2 /* South_Leeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 20327A1222075779007CE1C2 /* South_Leeds.json */; };
+		20327A17220758F4007CE1C2 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20327A16220758F4007CE1C2 /* SetUpViewController.swift */; };
 		2082B5B921F383E30076DE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5B821F383E30076DE6B /* AppDelegate.swift */; };
 		2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5BA21F383E30076DE6B /* FinishersViewController.swift */; };
 		2082B5BE21F383E30076DE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5BC21F383E30076DE6B /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 		20327A04220739A1007CE1C2 /* Bundle-Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decoding.swift"; sourceTree = "<group>"; };
 		20327A0A220740E6007CE1C2 /* Queensbury.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Queensbury.json; sourceTree = "<group>"; };
 		20327A0C2207418C007CE1C2 /* Pudsey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pudsey.json; sourceTree = "<group>"; };
+		20327A0E2207539F007CE1C2 /* CountersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersTableViewController.swift; sourceTree = "<group>"; };
+		20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersTableViewCell.swift; sourceTree = "<group>"; };
+		20327A1222075779007CE1C2 /* South_Leeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = South_Leeds.json; sourceTree = "<group>"; };
+		20327A16220758F4007CE1C2 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		2082B5B521F383E30076DE6B /* RaceDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2082B5B821F383E30076DE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2082B5BA21F383E30076DE6B /* FinishersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +113,10 @@
 				20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */,
 				20327A0A220740E6007CE1C2 /* Queensbury.json */,
 				20327A0C2207418C007CE1C2 /* Pudsey.json */,
+				20327A1222075779007CE1C2 /* South_Leeds.json */,
+				20327A0E2207539F007CE1C2 /* CountersTableViewController.swift */,
+				20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */,
+				20327A16220758F4007CE1C2 /* SetUpViewController.swift */,
 			);
 			path = RaceDay;
 			sourceTree = "<group>";
@@ -167,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20327A1322075779007CE1C2 /* South_Leeds.json in Resources */,
 				2082B5C321F383E50076DE6B /* LaunchScreen.storyboard in Resources */,
 				20327A0D2207418C007CE1C2 /* Pudsey.json in Resources */,
 				20327A0B220740E6007CE1C2 /* Queensbury.json in Resources */,
@@ -184,6 +197,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				203040B422060A9300D1CCA2 /* ScoreModel.swift in Sources */,
+				20327A17220758F4007CE1C2 /* SetUpViewController.swift in Sources */,
+				20327A0F2207539F007CE1C2 /* CountersTableViewController.swift in Sources */,
 				203040B622060B1400D1CCA2 /* result.swift in Sources */,
 				2082B5CB21F3842B0076DE6B /* Runner.swift in Sources */,
 				20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */,
@@ -194,6 +209,7 @@
 				20327A05220739A1007CE1C2 /* Bundle-Decoding.swift in Sources */,
 				20B60E1C21F4E91000348DB3 /* runner.swift in Sources */,
 				20B60E1E21F4E91000348DB3 /* race.swift in Sources */,
+				20327A11220753C4007CE1C2 /* CountersTableViewCell.swift in Sources */,
 				20B60E1D21F4E91000348DB3 /* enums.swift in Sources */,
 				2082B5B921F383E30076DE6B /* AppDelegate.swift in Sources */,
 				203040B22206034E00D1CCA2 /* TeamsTableViewCell.swift in Sources */,

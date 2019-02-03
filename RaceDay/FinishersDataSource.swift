@@ -10,19 +10,23 @@ import UIKit
 
 class FinishersDataSource: NSObject, UITableViewDataSource {
   
+  var currentRace: ClubName = .Queensbury
   var runners = [Runner]()
   var runnerDictionary = [Int: Runner]()
   var runnerOrder = [Runner]()
   var filteredRunnerOrder = [Result]()
   var runnerResult = [Result]()
- // var finishers = [Int]()
+  var finishers = [Int]()
 
   
-let finishers = Bundle.main.decode([Int].self, from: "Pudsey.json")
-  
+  func getFinishers(_ race: ClubName) {
+    let filename = "\(race.rawValue).json"
+    finishers = Bundle.main.decode([Int].self, from: filename)
+  }
 
   override init() {
     super.init()
+    getFinishers(currentRace)
     runners = try! importRunners()
     runnerDictionary = createDictionary(from: runners)
     runnerOrder = finishers.compactMap { runnerDictionary[$0] }
@@ -64,7 +68,6 @@ let finishers = Bundle.main.decode([Int].self, from: "Pudsey.json")
     }
     return results
   }
-  
   
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

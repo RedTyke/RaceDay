@@ -18,6 +18,7 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
     tableView.dataSource = dataSource
   
     navigationItem.title = "Finishers"
+    navigationItem.title?.append(contentsOf: " - \(dataSource.currentRace.rawValue)")
     navigationItem.hidesSearchBarWhenScrolling = false
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(EditFinishers))
     self.definesPresentationContext = true
