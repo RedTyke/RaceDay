@@ -42,16 +42,17 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
   // FIX: Move out of viewcontroller
   func updateSearchResults(for searchController: UISearchController) {
     if let text = searchController.searchBar.text, text.count > 0 {
-      dataSource.filteredRunnerOrder = dataSource.runnerOrder.filter {
-        $0.firstName.localizedCaseInsensitiveContains(text)
-        || $0.lastName.localizedCaseInsensitiveContains(text)
-        || $0.club.rawValue.localizedCaseInsensitiveContains(text)
-        || $0.sex.rawValue.localizedCaseInsensitiveContains(text)
-        || $0.ageClass.competition().rawValue.localizedCaseInsensitiveContains(text)
+      dataSource.filteredRunnerOrder = dataSource.runnerResult.filter {
+        $0.runner.firstName.localizedCaseInsensitiveContains(text)
+        || $0.runner.lastName.localizedCaseInsensitiveContains(text)
+        || $0.runner.club.rawValue.localizedCaseInsensitiveContains(text)
+        || $0.runner.ageClass.rawValue.localizedCaseInsensitiveContains(text)
+        || $0.runner.sex.rawValue.localizedCaseInsensitiveContains(text)
+        || $0.runner.ageClass.competition().rawValue.localizedCaseInsensitiveContains(text)
         
       }
     } else {
-        dataSource.filteredRunnerOrder = dataSource.runnerOrder
+        dataSource.filteredRunnerOrder = dataSource.runnerResult
       }
   tableView.reloadData()
   }

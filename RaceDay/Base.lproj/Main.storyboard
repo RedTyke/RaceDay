@@ -43,20 +43,34 @@
                                             <rect key="frame" x="64" y="19" width="36" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-Jh-CId">
                                             <rect key="frame" x="121" y="19" width="81" height="15"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="H6f-xP-GNN">
-                                            <rect key="frame" x="222" y="6" width="27" height="27"/>
+                                            <rect key="frame" x="240" y="7" width="27" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-UM-I6V">
+                                            <rect key="frame" x="322" y="10" width="37" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjE-5B-dbD">
+                                            <rect key="frame" x="189" y="4" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ZY7-As-px8" firstAttribute="leading" secondItem="Efr-9q-Igr" secondAttribute="leadingMargin" id="9wM-ZR-X5S"/>
@@ -65,11 +79,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ageLabel" destination="MjE-5B-dbD" id="Bn3-pJ-GBz"/>
                                     <outlet property="clubImage" destination="H6f-xP-GNN" id="SDo-ov-Yob"/>
                                     <outlet property="clubLabel" destination="4bA-Jh-CId" id="53p-3K-80U"/>
                                     <outlet property="nameLabel" destination="JsS-Qs-FUp" id="AUh-8N-gGk"/>
                                     <outlet property="numberLabel" destination="Bue-kH-oHG" id="j6i-hm-VSz"/>
                                     <outlet property="positionLabel" destination="ZY7-As-px8" id="8ls-yt-xdq"/>
+                                    <outlet property="scoreLabel" destination="yXW-UM-I6V" id="J1m-bf-cbW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

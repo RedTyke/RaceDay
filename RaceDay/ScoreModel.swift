@@ -10,9 +10,9 @@ import Foundation
 
 class ScoreModel {
   
-
-  // Need to feed in runnerResults as a [Result]
-  //let runnerResults = scoreRunners(runnerOrder)
+  // FIX: create initialiser that runs all required steps to give output of result tables
+  
+  
   var counterResults: [CompResult] = []
   var table: [ClubResult] = []
   
@@ -33,7 +33,7 @@ class ScoreModel {
         let compRequirement = getCompRequirements(for: comp)
         
         
-        
+        // FIX: GET RID OF INOUT
         adjustFinishers(topFinishers: &topFinishers, remainingFinishers: remainingFinishers, for: compRequirement)
   
         // Output counters to results individual and club
