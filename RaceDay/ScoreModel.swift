@@ -167,29 +167,4 @@ class ScoreModel {
     }
   }
   
-  
-  func printTable(_ table: [ClubResult]) {
-    for comp in Competition.allCases {
-      let tableFiltered = table.filter { $0.comp == comp }
-      let sortedTable = tableFiltered.sorted { $0.points > $1.points }
-      for result in sortedTable {
-        print("Comp: \(result.comp) Club: \(result.club) : \(result.points)")
-      }
-    }
-  }
-  
-  func printIndividual(results: [CompResult]) {
-    for result in results {
-      print("Club: \(result.runner.club), Comp: \(result.comp), Runner: \(result.runner.firstName) \(result.runner.lastName), AgeClass: \(result.runner.ageClass.competition()), Pts: \(result.points)")
-    }
-  }
-  
-  func outputResults() {
-    print("### Counters ###")
-    printIndividual(results: counterResults)
-    print("")
-    print("#### Competition Table ####")
-    printTable(table)
-  }
-  
 }

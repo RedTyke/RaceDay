@@ -28,6 +28,7 @@ class TeamsTableViewController: UITableViewController, UISearchResultsUpdating, 
       
       navigationItem.title = "Team Results"
       navigationItem.hidesSearchBarWhenScrolling = false
+      self.definesPresentationContext = true
       
       let search = UISearchController(searchResultsController: nil)
       search.searchResultsUpdater = self

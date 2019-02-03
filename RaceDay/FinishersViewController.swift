@@ -20,6 +20,7 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
     navigationItem.title = "Finishers"
     navigationItem.hidesSearchBarWhenScrolling = false
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(EditFinishers))
+    self.definesPresentationContext = true
     
     let search = UISearchController(searchResultsController: nil)
     search.searchResultsUpdater = self
