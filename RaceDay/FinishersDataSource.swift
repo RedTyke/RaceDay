@@ -43,6 +43,27 @@ class FinishersDataSource: NSObject, UITableViewDataSource {
   }
   
   
+  func scoreRunners(_ runners: [Runner]) -> [Result] {
+    
+    var malePoints = 500
+    var femalePoints = 500
+    var results: [Result] = []
+    
+    for runner in runners {
+      
+      switch runner.sex {
+      case .male:
+        results.append(Result(runner: runner, points: malePoints))
+        malePoints -= 1
+      case .female:
+        results.append(Result(runner: runner, points: femalePoints))
+        femalePoints -= 1
+      }
+    }
+    return results
+  }
+  
+  
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return filteredRunnerOrder.count
@@ -51,14 +72,11 @@ class FinishersDataSource: NSObject, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "FinisherTableViewCell", for: indexPath) as! FinisherTableViewCell
     
-    //let finisher = runnerOrder[indexPath.row]
     let filteredFinisher = filteredRunnerOrder[indexPath.row]
     
     if let position = runnerOrder.firstIndex(where: { $0.number == filteredFinisher.number }) {
         cell.positionLabel.text = String(position + 1)
     }
-    // FIX: Needs to pick up position of runner in unfiltered runnerOrder Array
-    //cell.positionLabel.text = String(indexPath.row + 1)
     cell.nameLabel.text = "\(filteredFinisher.firstName) \(filteredFinisher.lastName)"
     cell.numberLabel.text = String(filteredFinisher.number)
     cell.clubLabel.text = filteredFinisher.club.rawValue

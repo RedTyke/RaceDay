@@ -14,7 +14,6 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    registerTableViewCells()
     
     tableView.dataSource = dataSource
   
@@ -34,12 +33,6 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
     super.viewWillAppear(animated)
     tableView.reloadData()
   }
-    
-    func registerTableViewCells() {
-        let finisherCell = UINib(nibName: "FinisherTableViewCell", bundle: nil)
-        self.tableView.register(finisherCell, forCellReuseIdentifier: "FinisherTableViewCell")
-    }
-
   
   @objc func EditFinishers() {
     print("Allow adjustment of finishing order")
