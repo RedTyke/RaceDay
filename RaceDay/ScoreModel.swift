@@ -17,7 +17,7 @@ class ScoreModel {
   var counterResults: [CompResult] = []
   var table: [ClubResult] = []
   var runnerResult = [Result]()
-
+  
   init() {
     
     scoreClubs(runnerResults: runnerData.runnerResult)
@@ -42,7 +42,7 @@ class ScoreModel {
         
         // FIX: GET RID OF INOUT
         adjustFinishers(topFinishers: &topFinishers, remainingFinishers: remainingFinishers, for: compRequirement)
-  
+        
         // Output counters to results individual and club
         let finalFinishers = topFinishers
         for counter in topFinishers {
@@ -133,7 +133,7 @@ class ScoreModel {
     
     for club in ClubName.allCases {
       var overallScore = 0
-    for result in table where result.club == club && ( result.comp == Competition.openMale || result.comp == Competition.openFemale ) {
+      for result in table where result.club == club && ( result.comp == Competition.openMale || result.comp == Competition.openFemale ) {
         overallScore += result.points
       }
       overallResult.append(ClubResult(club: club, comp: Competition.openMale ,points: overallScore))
@@ -156,14 +156,14 @@ class ScoreModel {
       let tableFiltered = table.filter { $0.comp == Competition.openFemale }
       let sortedTable = tableFiltered.sorted { $0.points > $1.points }
       return sortedTable
-   case .vet:
-    let tableFiltered = table.filter { $0.comp == Competition.vet }
-    let sortedTable = tableFiltered.sorted { $0.points > $1.points }
-    return sortedTable
-   case .supervet:
-    let tableFiltered = table.filter { $0.comp == Competition.supervet }
-    let sortedTable = tableFiltered.sorted { $0.points > $1.points }
-    return sortedTable
+    case .vet:
+      let tableFiltered = table.filter { $0.comp == Competition.vet }
+      let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+      return sortedTable
+    case .supervet:
+      let tableFiltered = table.filter { $0.comp == Competition.supervet }
+      let sortedTable = tableFiltered.sorted { $0.points > $1.points }
+      return sortedTable
     }
   }
   

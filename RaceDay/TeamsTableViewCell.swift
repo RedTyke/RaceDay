@@ -9,7 +9,7 @@
 import UIKit
 
 class TeamsTableViewCell: UITableViewCell {
-
+  
   @IBOutlet weak var positionLabel: UILabel!
   @IBOutlet weak var clubNameLabel: UILabel!
   @IBOutlet weak var pointsLabel: UILabel!
@@ -17,15 +17,15 @@ class TeamsTableViewCell: UITableViewCell {
   
   
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
   
-    }
-
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    
+    
+  }
+  
 }

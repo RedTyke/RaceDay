@@ -18,23 +18,25 @@ class SetUpViewController: UIViewController {
   }
   @IBAction func queensburyPressed(_ sender: Any) {
     print("Queensbury")
-    dataModel.currentRace = .Queensbury
+    dataModel.changeRace(.Queensbury)
+    
   }
   @IBAction func pudseyPressed(_ sender: Any) {
     print("Pudsey")
-    dataModel.currentRace = .Pudsey
+    dataModel.changeRace(.Pudsey)
   }
   @IBAction func southLeedsPressed(_ sender: Any) {
     print("South Leeds")
-    dataModel.currentRace = .South_Leeds
+    dataModel.changeRace(.South_Leeds)
+    
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-
-
+    // Do any additional setup after loading the view.
+  }
+  
+  
+  
 }

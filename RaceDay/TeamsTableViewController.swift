@@ -8,58 +8,53 @@
 
 import UIKit
 
-class TeamsTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
- 
+class TeamsTableViewController: UITableViewController {
   
-  
-
   let scoreModel = ScoreModel()
   var filteredResults = [ClubResult]()
   var compIndex = 0
+  var segments: UISegmentedControl!
   
-  // On the day results....not SEASON results.....need separate view for SEASON TEAM, Individual....most improved
-  // FIX: Add searchbar to select OVERALL, MALE, FEMALE, VETS, SUPERVETS to filter which table
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-     // scoreModel.outputResults()
-      filteredResults = scoreModel.getTeamResult(TeamResult.overall)
-      
-      navigationItem.title = "Team Results"
-      navigationItem.hidesSearchBarWhenScrolling = false
-      self.definesPresentationContext = true
-      
-      let search = UISearchController(searchResultsController: nil)
-      search.searchResultsUpdater = self
-      search.obscuresBackgroundDuringPresentation = false
-      search.searchBar.placeholder = "Type something to search here"
-      search.searchBar.scopeButtonTitles = ["Overall","Men","Women","Vets","Super Vets"]
-      search.searchBar.delegate = self
-      navigationItem.searchController = search
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // scoreModel.outputResults()
+    filteredResults = scoreModel.getTeamResult(TeamResult.overall)
+    
+    navigationItem.title = "Team Results"
+    navigationItem.hidesSearchBarWhenScrolling = false
+    self.definesPresentationContext = true
+    
+    segments = UISegmentedControl(items: ["Overall","Men","Women","Vets","Super Vets"])
+    navigationItem.titleView = segments
+    segments.center = self.view.center
+    segments.layer.cornerRadius = 5
+    segments.addTarget(self, action: #selector(segmentTouched), for: .valueChanged)
+    
+  }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     tableView.reloadData()
   }
-
- 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredResults.count
-    }
+  
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return filteredResults.count
+  }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   
+    
     let result = filteredResults[indexPath.row]
     
- let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsTableViewCell", for: indexPath) as! TeamsTableViewCell
-   
+    let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsTableViewCell", for: indexPath) as! TeamsTableViewCell
+    
     cell.positionLabel.text = String(indexPath.row + 1)
     cell.clubNameLabel.text = result.club.rawValue
     cell.pointsLabel.text = String(result.points)
     cell.clubImage.image = UIImage(named: result.club.rawValue) ?? UIImage(named: "default")
-
+    
     return cell
   }
   
@@ -76,14 +71,12 @@ class TeamsTableViewController: UITableViewController, UISearchResultsUpdating, 
   }
  */
  
-  func updateSearchResults(for searchController: UISearchController) {
-    print("stuff happens....")
-  }
- 
-  func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-      print("Scope button \(selectedScope) pressed")
-    // Needs to be cleaner - refactor
-    switch selectedScope {
+
+  
+  @objc func segmentTouched(_ sender: UISegmentedControl) {
+    print("Index: \(sender.selectedSegmentIndex)")
+    
+    switch sender.selectedSegmentIndex {
     case 0: filteredResults = scoreModel.getTeamResult(TeamResult.overall)
     case 1: filteredResults = scoreModel.getTeamResult(TeamResult.male)
     case 2: filteredResults = scoreModel.getTeamResult(TeamResult.female)
@@ -91,8 +84,10 @@ class TeamsTableViewController: UITableViewController, UISearchResultsUpdating, 
     case 4: filteredResults = scoreModel.getTeamResult(TeamResult.supervet)
     default: filteredResults = scoreModel.getTeamResult(TeamResult.overall)
     }
-        tableView.reloadData()
+    tableView.reloadData()
+    
   }
+  
 
 
 }

@@ -9,14 +9,14 @@
 import UIKit
 
 class FinishersViewController: UITableViewController, UISearchResultsUpdating {
-
+  
   let dataSource = FinishersDataSource()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     tableView.dataSource = dataSource
-  
+    
     navigationItem.title = "Finishers"
     navigationItem.title?.append(contentsOf: " - \(dataSource.currentRace.rawValue)")
     navigationItem.hidesSearchBarWhenScrolling = false
@@ -34,6 +34,7 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     tableView.reloadData()
+    print("Reloaded for race \(dataSource.currentRace)")
   }
   
   @objc func EditFinishers() {
@@ -46,19 +47,19 @@ class FinishersViewController: UITableViewController, UISearchResultsUpdating {
     if let text = searchController.searchBar.text, text.count > 0 {
       dataSource.filteredRunnerOrder = dataSource.runnerResult.filter {
         $0.runner.firstName.localizedCaseInsensitiveContains(text)
-        || $0.runner.lastName.localizedCaseInsensitiveContains(text)
-        || $0.runner.club.rawValue.localizedCaseInsensitiveContains(text)
-        || $0.runner.ageClass.rawValue.localizedCaseInsensitiveContains(text)
-        || $0.runner.sex.rawValue.localizedCaseInsensitiveContains(text)
-        || $0.runner.ageClass.competition().rawValue.localizedCaseInsensitiveContains(text)
+          || $0.runner.lastName.localizedCaseInsensitiveContains(text)
+          || $0.runner.club.rawValue.localizedCaseInsensitiveContains(text)
+          || $0.runner.ageClass.rawValue.localizedCaseInsensitiveContains(text)
+          || $0.runner.sex.rawValue.localizedCaseInsensitiveContains(text)
+          || $0.runner.ageClass.competition().rawValue.localizedCaseInsensitiveContains(text)
         
       }
     } else {
-        dataSource.filteredRunnerOrder = dataSource.runnerResult
-      }
-  tableView.reloadData()
+      dataSource.filteredRunnerOrder = dataSource.runnerResult
+    }
+    tableView.reloadData()
   }
-
-    
+  
+  
 }
 

@@ -10,21 +10,22 @@ import UIKit
 
 class FinishersDataSource: NSObject, UITableViewDataSource {
   
-  var currentRace: ClubName = .Queensbury
+  var currentRace: ClubName
   var runners = [Runner]()
   var runnerDictionary = [Int: Runner]()
   var runnerOrder = [Runner]()
   var filteredRunnerOrder = [Result]()
   var runnerResult = [Result]()
   var finishers = [Int]()
-
+  
   
   func getFinishers(_ race: ClubName) {
     let filename = "\(race.rawValue).json"
     finishers = Bundle.main.decode([Int].self, from: filename)
   }
-
+  
   override init() {
+    currentRace = .Queensbury
     super.init()
     getFinishers(currentRace)
     runners = try! importRunners()
@@ -36,7 +37,7 @@ class FinishersDataSource: NSObject, UITableViewDataSource {
   }
   
   func importRunners() throws -> [Runner] {
-   let runners = Bundle.main.decode([Runner].self, from: "WYWLRunnersJSON.json")
+    let runners = Bundle.main.decode([Runner].self, from: "WYWLRunnersJSON.json")
     return runners
   }
   
@@ -80,7 +81,7 @@ class FinishersDataSource: NSObject, UITableViewDataSource {
     let filteredFinisher = filteredRunnerOrder[indexPath.row]
     
     if let position = runnerOrder.firstIndex(where: { $0.number == filteredFinisher.runner.number }) {
-        cell.positionLabel.text = String(position + 1)
+      cell.positionLabel.text = String(position + 1)
     }
     cell.nameLabel.text = "\(filteredFinisher.runner.firstName) \(filteredFinisher.runner.lastName)"
     cell.numberLabel.text = String(filteredFinisher.runner.number)
@@ -91,6 +92,15 @@ class FinishersDataSource: NSObject, UITableViewDataSource {
     
     return cell
     
+  }
+  
+  func changeRace(_ race: ClubName) {
+    currentRace = race
+    getFinishers(currentRace)
+    runnerOrder = finishers.compactMap { runnerDictionary[$0] }
+    runnerResult = scoreRunners(runnerOrder)
+    filteredRunnerOrder = runnerResult
+    print("Race changed to \(currentRace)")
   }
   
 }
