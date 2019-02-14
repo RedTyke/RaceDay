@@ -10,21 +10,23 @@ import UIKit
 
 class FinishersDataModel {
   
-  let runnersData = RunnersDataModel()
+  let runnersData: RunnersDataModel
   
-  var currentRace: ClubName
-  /*
+  //var currentRace: ClubName
+  
   var currentRace: ClubName {
     get {
-      guard let race = UserDefaults.standard.value(forKey: "currentRace")
-        else { return .Queensbury }
-     return race as! ClubName
+      let rawString =  UserDefaults.standard.value(forKey: "currentRace") as! ClubName.RawValue
+      print("Got currentRace as \(rawString)")
+      return ClubName(rawValue: rawString)!
+      
     }
     set {
-      UserDefaults.standard.set(newValue, forKey: "currentRace")
+      UserDefaults.standard.set(newValue.rawValue, forKey: "currentRace")
+      print("Current race updated to \(newValue.rawValue)")
     }
   }
- */
+ 
 
   var runnerDictionary: [Int: Runner]!
   var runnerOrder = [Runner]()
@@ -33,15 +35,8 @@ class FinishersDataModel {
   var finishers = [Int]()
   
   
-  func getFinishers(_ race: ClubName) {
-    let filename = "\(race.rawValue).json"
-    finishers = Bundle.main.decode([Int].self, from: filename)
-  }
-  
- 
   init() {
-    currentRace = .Queensbury
-    let runnersData = RunnersDataModel()
+    runnersData = RunnersDataModel()
     runnerDictionary = runnersData.runnerDictionary
     
     refreshFinisherData()
@@ -50,6 +45,11 @@ class FinishersDataModel {
   
   deinit {
     print("Data model deinit")
+  }
+  
+  func getFinishers(_ race: ClubName) {
+    let filename = "\(race.rawValue).json"
+    finishers = Bundle.main.decode([Int].self, from: filename)
   }
   
   func scoreRunners(_ runners: [Runner]) -> [Result] {
@@ -78,6 +78,7 @@ class FinishersDataModel {
     runnerOrder = finishers.compactMap { runnerDictionary[$0] }
     runnerResult = scoreRunners(runnerOrder)
     filteredRunnerOrder = runnerResult
+    print("Data model refreshed for \(currentRace.rawValue)")
   }
   
 }
