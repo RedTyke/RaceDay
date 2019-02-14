@@ -23,7 +23,11 @@
 		2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2082B5BA21F383E30076DE6B /* FinishersViewController.swift */; };
 		2082B5BE21F383E30076DE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5BC21F383E30076DE6B /* Main.storyboard */; };
 		2082B5C321F383E50076DE6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */; };
-		20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21F3121FDD283002518AD /* FinishersDataSource.swift */; };
+		20A578A4220EDDC800C85AA5 /* RunnersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A578A3220EDDC800C85AA5 /* RunnersDataModel.swift */; };
+		20A578AB220EF0A700C85AA5 /* FinishersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A578AA220EF0A700C85AA5 /* FinishersDataSource.swift */; };
+		20A578AD220F0E9200C85AA5 /* SetUpViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A578AC220F0E9200C85AA5 /* SetUpViewControllerDelegate.swift */; };
+		20A578B02210031900C85AA5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A578AF2210031900C85AA5 /* MainTabBarController.swift */; };
+		20B21F3221FDD283002518AD /* FinishersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B21F3121FDD283002518AD /* FinishersDataModel.swift */; };
 		20B21F3421FDF079002518AD /* AssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B21F3321FDF079002518AD /* AssetCatalog.xcassets */; };
 		20B60E1721F4E8E100348DB3 /* WYWLRunnersJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */; };
 		20B60E1D21F4E91000348DB3 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1921F4E90F00348DB3 /* enums.swift */; };
@@ -50,7 +54,11 @@
 		2082B5BD21F383E30076DE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2082B5C221F383E50076DE6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2082B5C421F383E50076DE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20B21F3121FDD283002518AD /* FinishersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersDataSource.swift; sourceTree = "<group>"; };
+		20A578A3220EDDC800C85AA5 /* RunnersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnersDataModel.swift; sourceTree = "<group>"; };
+		20A578AA220EF0A700C85AA5 /* FinishersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersDataSource.swift; sourceTree = "<group>"; };
+		20A578AC220F0E9200C85AA5 /* SetUpViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewControllerDelegate.swift; sourceTree = "<group>"; };
+		20A578AF2210031900C85AA5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		20B21F3121FDD283002518AD /* FinishersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishersDataModel.swift; sourceTree = "<group>"; };
 		20B21F3321FDF079002518AD /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = "<group>"; };
 		20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WYWLRunnersJSON.json; sourceTree = "<group>"; };
 		20B60E1921F4E90F00348DB3 /* enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
@@ -89,30 +97,82 @@
 			isa = PBXGroup;
 			children = (
 				2082B5B821F383E30076DE6B /* AppDelegate.swift */,
-				20B21F3121FDD283002518AD /* FinishersDataSource.swift */,
-				2082B5BA21F383E30076DE6B /* FinishersViewController.swift */,
-				527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */,
-				203040AF2205709F00D1CCA2 /* TeamsTableViewController.swift */,
-				203040B12206034E00D1CCA2 /* TeamsTableViewCell.swift */,
+				20A578A8220EE48200C85AA5 /* Custom Types */,
+				20A578A9220EE4B700C85AA5 /* Extensions */,
+				20A578A5220EE3D100C85AA5 /* Data Models */,
+				20A578AE220F0F3400C85AA5 /* Protocol and Delegates */,
+				20A578A7220EE44400C85AA5 /* Viewcontrollers */,
+				20A578A6220EE3EA00C85AA5 /* JSON */,
 				2082B5BC21F383E30076DE6B /* Main.storyboard */,
 				20B21F3321FDF079002518AD /* AssetCatalog.xcassets */,
 				2082B5C121F383E50076DE6B /* LaunchScreen.storyboard */,
-				20B60E1921F4E90F00348DB3 /* enums.swift */,
-				20327A18220790B3007CE1C2 /* runner.swift */,
-				20B60E1A21F4E90F00348DB3 /* race.swift */,
-				203040B522060B1400D1CCA2 /* result.swift */,
 				2082B5C421F383E50076DE6B /* Info.plist */,
+			);
+			path = RaceDay;
+			sourceTree = "<group>";
+		};
+		20A578A5220EE3D100C85AA5 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				20A578A3220EDDC800C85AA5 /* RunnersDataModel.swift */,
+				20B21F3121FDD283002518AD /* FinishersDataModel.swift */,
+				20A578AA220EF0A700C85AA5 /* FinishersDataSource.swift */,
 				203040B322060A9300D1CCA2 /* ScoreModel.swift */,
-				20327A04220739A1007CE1C2 /* Bundle-Decoding.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		20A578A6220EE3EA00C85AA5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
 				20B60E1621F4E8E100348DB3 /* WYWLRunnersJSON.json */,
 				20327A0A220740E6007CE1C2 /* Queensbury.json */,
 				20327A0C2207418C007CE1C2 /* Pudsey.json */,
 				20327A1222075779007CE1C2 /* South_Leeds.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		20A578A7220EE44400C85AA5 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				20A578AF2210031900C85AA5 /* MainTabBarController.swift */,
+				2082B5BA21F383E30076DE6B /* FinishersViewController.swift */,
+				527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */,
+				203040AF2205709F00D1CCA2 /* TeamsTableViewController.swift */,
+				203040B12206034E00D1CCA2 /* TeamsTableViewCell.swift */,
 				20327A0E2207539F007CE1C2 /* CountersTableViewController.swift */,
 				20327A10220753C4007CE1C2 /* CountersTableViewCell.swift */,
 				20327A16220758F4007CE1C2 /* SetUpViewController.swift */,
 			);
-			path = RaceDay;
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		20A578A8220EE48200C85AA5 /* Custom Types */ = {
+			isa = PBXGroup;
+			children = (
+				20B60E1921F4E90F00348DB3 /* enums.swift */,
+				20327A18220790B3007CE1C2 /* runner.swift */,
+				20B60E1A21F4E90F00348DB3 /* race.swift */,
+				203040B522060B1400D1CCA2 /* result.swift */,
+			);
+			path = "Custom Types";
+			sourceTree = "<group>";
+		};
+		20A578A9220EE4B700C85AA5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20327A04220739A1007CE1C2 /* Bundle-Decoding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		20A578AE220F0F3400C85AA5 /* Protocol and Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				20A578AC220F0E9200C85AA5 /* SetUpViewControllerDelegate.swift */,
+			);
+			path = "Protocol and Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,14 +251,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				20327A19220790B3007CE1C2 /* runner.swift in Sources */,
+				20A578AD220F0E9200C85AA5 /* SetUpViewControllerDelegate.swift in Sources */,
+				20A578B02210031900C85AA5 /* MainTabBarController.swift in Sources */,
 				203040B422060A9300D1CCA2 /* ScoreModel.swift in Sources */,
 				20327A17220758F4007CE1C2 /* SetUpViewController.swift in Sources */,
 				20327A0F2207539F007CE1C2 /* CountersTableViewController.swift in Sources */,
 				203040B622060B1400D1CCA2 /* result.swift in Sources */,
-				20B21F3221FDD283002518AD /* FinishersDataSource.swift in Sources */,
+				20A578AB220EF0A700C85AA5 /* FinishersDataSource.swift in Sources */,
+				20B21F3221FDD283002518AD /* FinishersDataModel.swift in Sources */,
 				203040B02205709F00D1CCA2 /* TeamsTableViewController.swift in Sources */,
 				527EF39F21F4D94D007AFCAD /* FinisherTableViewCell.swift in Sources */,
 				2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */,
+				20A578A4220EDDC800C85AA5 /* RunnersDataModel.swift in Sources */,
 				20327A05220739A1007CE1C2 /* Bundle-Decoding.swift in Sources */,
 				20B60E1E21F4E91000348DB3 /* race.swift in Sources */,
 				20327A11220753C4007CE1C2 /* CountersTableViewCell.swift in Sources */,
