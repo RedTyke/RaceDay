@@ -1,11 +1,3 @@
-//
-//  result.swift
-//  RaceDay
-//
-//  Created by John McNiffe on 02/02/2019.
-//  Copyright © 2019 John McNiffe. All rights reserved.
-//
-
 import Foundation
 
 public struct Result {
