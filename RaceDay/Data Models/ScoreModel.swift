@@ -10,7 +10,6 @@ import Foundation
 
 class ScoreModel {
   
-  // FIX: create initialiser that runs all required steps to give output of result tables
   // FIX:  Only want to do this once the race is complete....should be triggered by user changing status of race to COMPLETE.....results tab should be greyed out and not selectable until this point
   var runnerData: FinishersDataModel!
   
@@ -23,6 +22,7 @@ class ScoreModel {
     scoreClubs(runnerResults: runnerData.runnerResult)
   }
   
+  // MARK: Score Runners
   func scoreClubs(runnerResults: [Result]) {
     for club in ClubName.allCases {
       let clubSelection = runnerResults.filter { $0.runner.club == club }
@@ -39,7 +39,6 @@ class ScoreModel {
         
         let compRequirement = getCompRequirements(for: comp)
         
-        
         // FIX: GET RID OF INOUT
         adjustFinishers(topFinishers: &topFinishers, remainingFinishers: remainingFinishers, for: compRequirement)
         
@@ -55,7 +54,6 @@ class ScoreModel {
     }
   }
   
-  
   func createFilter(for comp: Competition) -> (Result) -> Bool {
     switch comp {
     case .openMale: return { $0.runner.sex == .male }
@@ -64,7 +62,6 @@ class ScoreModel {
     case .supervet: return { $0.runner.ageClass.competition() == .supervet }
     }
   }
-  
   
   func getCompRequirements(for comp: Competition) -> CompRequirement {
     switch comp {
@@ -94,7 +91,6 @@ class ScoreModel {
   
   func adjustFinishers(topFinishers: inout [Result], remainingFinishers: [Result], for compRequirements: CompRequirement) {
     
-    
     for check in CounterCheck.allCases {
       
       let filter = getCounterFilter(for: check)
@@ -110,7 +106,6 @@ class ScoreModel {
         }
       }()
       
-      
       while topFinishers_selection.count < requirementCount { // Queensbury race - Methley too many male vets on this code...need to eliminate one if count too high
         guard remainingFinishers_selection.count > 0 else { break }
         let runnerIndex = topFinishers.lastIndex(where: filterRemainder)
@@ -125,6 +120,7 @@ class ScoreModel {
     }
   }
   
+  // MARK: Score Teams
   
   func getOverallResult() -> [ClubResult] {
     var overallResult: [ClubResult] = []
@@ -138,7 +134,6 @@ class ScoreModel {
     }
     return overallResult
   }
-  
   
   func getTeamResult(_ comp: TeamResult) -> [ClubResult] {
     

@@ -52,6 +52,21 @@ class TeamsTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    guard let vc = storyboard?.instantiateViewController(withIdentifier: "CountersTableViewController") as? CountersTableViewController else {
+      fatalError("Unable to instantiate memory view controller.")
+    }
+    
+    let selected = filteredResults[indexPath.row]
+    
+    vc.team = selected.club
+    vc.comp = selected.comp
+    
+    navigationController?.pushViewController(vc, animated: true)
+    
+  }
+  
   func setUpNavBar() {
     navigationItem.title = "Team Results"
     navigationItem.hidesSearchBarWhenScrolling = false
@@ -64,19 +79,6 @@ class TeamsTableViewController: UITableViewController {
     segments.addTarget(self, action: #selector(segmentTouched), for: .valueChanged)
     
   }
-
- /*
-  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Team Tables"
-  }
-  
-   
-  override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 50
-  }
- */
- 
-
   
   @objc func segmentTouched(_ sender: UISegmentedControl) {
     print("Index: \(sender.selectedSegmentIndex)")
@@ -90,9 +92,6 @@ class TeamsTableViewController: UITableViewController {
     default: filteredResults = scoreModel.getTeamResult(TeamResult.overall)
     }
     tableView.reloadData()
-    
   }
-  
-
 
 }

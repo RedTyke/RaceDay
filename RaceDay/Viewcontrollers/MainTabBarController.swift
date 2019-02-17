@@ -4,12 +4,14 @@ class MainTabBarController: UITabBarController, SetUpViewControllerDelegate {
   
   var finishersDataModel: FinishersDataModel!
   var finishersDataSource: FinishersDataSource!
+  var countersDataSource: CountersDataSource!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     finishersDataModel = FinishersDataModel()
     finishersDataSource = FinishersDataSource()
+    countersDataSource = CountersDataSource()
     
     
     let viewcontrollers = viewControllers!
@@ -18,6 +20,11 @@ class MainTabBarController: UITabBarController, SetUpViewControllerDelegate {
       if let navigationController = viewcontroller as? UINavigationController, let finishersViewController = navigationController.viewControllers.first as? FinishersViewController {
         finishersViewController.dataSource = finishersDataSource
       }
+      
+      if let navigationController = viewcontroller as? UINavigationController, let countersViewController = navigationController.viewControllers.first as? CountersTableViewController {
+        countersViewController.dataSource = countersDataSource
+      }
+ 
       
       if let navigationController = viewcontroller as? UINavigationController, let setUpViewController = navigationController.viewControllers.first as? SetUpViewController {
         setUpViewController.delegate = self

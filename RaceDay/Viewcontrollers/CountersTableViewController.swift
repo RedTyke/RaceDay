@@ -10,30 +10,36 @@ import UIKit
 
 class CountersTableViewController: UITableViewController {
   
-  let cellIdentifier = "CountersTableViewCell"
+  var dataModel: FinishersDataModel!
+  var dataSource = CountersDataSource()
+ 
+  var counterResults: [CompResult] = []
+  var team: ClubName!
+  var comp: Competition!
   
   override func viewDidLoad() {
+    dataModel = FinishersDataModel()
+  // dataSource = CountersDataSource()
     super.viewDidLoad()
     
+  tableView.dataSource = self.dataSource
+   // dataSource.filteredRunnerOrder = dataSource.runnerResult
+  
+    dataSource.filteredRunnerOrder = dataSource.filteredRunnerOrder.filter {
+      $0.runner.club.rawValue == team.rawValue &&
+      $0.runner.ageClass.competition() == comp
+    }
+    tableView.reloadData()
     
+    print("Counters didload - \(team), \(comp)")
   }
   
-  
-  
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
-    return 0
+    //dataSource.refreshData()
+    tableView.reloadData()
+ 
   }
-  
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CountersTableViewCell
-    
-    
-    
-    
-    
-    return cell
-  }
-  
-  
+
 }
