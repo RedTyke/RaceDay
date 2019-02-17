@@ -11,27 +11,27 @@ import UIKit
 class CountersTableViewController: UITableViewController {
   
   var dataModel: FinishersDataModel!
-  var dataSource = CountersDataSource()
+  var dataSource: CountersDataSource!
+  
+  var compIndex = 0
+  var segments: UISegmentedControl!
  
-  var counterResults: [CompResult] = []
+ // var counterResults: [CompResult] = []
   var team: ClubName!
-  var comp: Competition!
   
   override func viewDidLoad() {
     dataModel = FinishersDataModel()
-  // dataSource = CountersDataSource()
+    dataSource = CountersDataSource()
     super.viewDidLoad()
     
   tableView.dataSource = self.dataSource
    // dataSource.filteredRunnerOrder = dataSource.runnerResult
   
     dataSource.filteredRunnerOrder = dataSource.filteredRunnerOrder.filter {
-      $0.runner.club.rawValue == team.rawValue &&
-      $0.runner.ageClass.competition() == comp
+      $0.runner.club.rawValue == team.rawValue
     }
     tableView.reloadData()
-    
-    print("Counters didload - \(team), \(comp)")
+    setUpNavBar()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -41,5 +41,54 @@ class CountersTableViewController: UITableViewController {
     tableView.reloadData()
  
   }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    navigationController?.popViewController(animated: false)
+  }
+  
+  func setUpNavBar() {
+    navigationItem.title = "Counters"
+    navigationItem.hidesSearchBarWhenScrolling = false
+    self.definesPresentationContext = true
+    
+    segments = UISegmentedControl(items: ["Overall","Men","Women","Vets","Super Vets"])
+    navigationItem.titleView = segments
+    segments.center = self.view.center
+    segments.layer.cornerRadius = 5
+    segments.addTarget(self, action: #selector(segmentTouched), for: .valueChanged)
+    
+  }
+  
+  @objc func segmentTouched(_ sender: UISegmentedControl) {
+    print("Index: \(sender.selectedSegmentIndex)")
+    
+    switch sender.selectedSegmentIndex {
+    case 0:
+      dataSource.filterCounters(index: 0)
+      tableView.reloadData()
+    case 1:
+      dataSource.filterCounters(index: 1)
+      tableView.reloadData()
+    case 2:
+    dataSource.filterCounters(index: 2)
+    tableView.reloadData()
+      
+    case 3:
+    dataSource.filterCounters(index: 3)
+    tableView.reloadData()
+      
+    case 4:
+    dataSource.filterCounters(index: 4)
+    tableView.reloadData()
+      
+    default:
+    dataSource.filterCounters(index: 0)
+    tableView.reloadData()
+    }
+    //tableView.reloadData()
+  }
+  
 
 }

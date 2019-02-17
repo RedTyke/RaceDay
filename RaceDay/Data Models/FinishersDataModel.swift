@@ -16,7 +16,7 @@ class FinishersDataModel {
   
   var currentRace: ClubName {
     get {
-      let rawString =  UserDefaults.standard.value(forKey: "currentRace") as! ClubName.RawValue
+     let rawString =  UserDefaults.standard.value(forKey: "currentRace") as? ClubName.RawValue ?? ClubName.Queensbury.rawValue
       print("Got currentRace as \(rawString)")
       return ClubName(rawValue: rawString)!
       

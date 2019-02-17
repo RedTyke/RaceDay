@@ -8,10 +8,12 @@ class MainTabBarController: UITabBarController, SetUpViewControllerDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    UserDefaults.standard.set(ClubName.Queensbury.rawValue, forKey: "currentRace")
     
     finishersDataModel = FinishersDataModel()
     finishersDataSource = FinishersDataSource()
     countersDataSource = CountersDataSource()
+    
     
     
     let viewcontrollers = viewControllers!
@@ -21,9 +23,11 @@ class MainTabBarController: UITabBarController, SetUpViewControllerDelegate {
         finishersViewController.dataSource = finishersDataSource
       }
       
+      /*
       if let navigationController = viewcontroller as? UINavigationController, let countersViewController = navigationController.viewControllers.first as? CountersTableViewController {
         countersViewController.dataSource = countersDataSource
       }
+ */
  
       
       if let navigationController = viewcontroller as? UINavigationController, let setUpViewController = navigationController.viewControllers.first as? SetUpViewController {

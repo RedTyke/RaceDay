@@ -33,6 +33,7 @@ class TeamsTableViewController: UITableViewController {
     self.tableView.reloadData()
   }
   
+
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return filteredResults.count
@@ -61,11 +62,12 @@ class TeamsTableViewController: UITableViewController {
     let selected = filteredResults[indexPath.row]
     
     vc.team = selected.club
-    vc.comp = selected.comp
     
     navigationController?.pushViewController(vc, animated: true)
     
   }
+  
+  
   
   func setUpNavBar() {
     navigationItem.title = "Team Results"
