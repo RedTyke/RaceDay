@@ -24,6 +24,9 @@ class SetUpViewController: UIViewController {
   @IBAction func southLeedsPressed(_ sender: Any) {
    self.delegate?.setUpViewController(self, didChangeCurrentRace: .South_Leeds)
   }
+    @IBAction func crossgatesPressed(_ sender: Any) {
+   self.delegate?.setUpViewController(self, didChangeCurrentRace: .Crossgates)
+    }
   
   override func viewDidLoad() {
     super.viewDidLoad()
