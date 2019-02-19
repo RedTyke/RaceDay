@@ -49,7 +49,7 @@ class CountersTableViewController: UITableViewController {
   }
   
   func setUpNavBar() {
-    navigationItem.title = "Counters"
+    navigationItem.prompt = "Counters"
     navigationItem.hidesSearchBarWhenScrolling = false
     self.definesPresentationContext = true
     

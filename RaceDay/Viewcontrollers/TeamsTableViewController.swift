@@ -70,7 +70,10 @@ class TeamsTableViewController: UITableViewController {
   
   
   func setUpNavBar() {
-    navigationItem.title = "Team Results"
+    navigationItem.prompt = "Team Results"
+    navigationController?.navigationBar.titleTextAttributes = [
+      NSAttributedString.Key.font : UIFont.systemFont(ofSize: 30)
+    ]
     navigationItem.hidesSearchBarWhenScrolling = false
     self.definesPresentationContext = true
     

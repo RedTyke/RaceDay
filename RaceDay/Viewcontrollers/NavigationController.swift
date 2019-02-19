@@ -19,8 +19,8 @@ class NavigationController: UINavigationController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.isOpaque = false
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 30)
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 30)
         ]
     }
 

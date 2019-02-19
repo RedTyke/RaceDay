@@ -23,11 +23,13 @@ class MainTabBarController: UITabBarController, SetUpViewControllerDelegate {
         finishersViewController.dataSource = finishersDataSource
       }
       
-      /*
-      if let navigationController = viewcontroller as? UINavigationController, let countersViewController = navigationController.viewControllers.first as? CountersTableViewController {
-        countersViewController.dataSource = countersDataSource
+      
+      if let navigationController = viewcontroller as? UINavigationController, let teamsViewController = navigationController.viewControllers.first as? TeamsTableViewController {
+       navigationController.navigationBar.titleTextAttributes = [
+       NSAttributedString.Key.font : UIFont.systemFont(ofSize: 30)
+       ]
       }
- */
+ 
  
       
       if let navigationController = viewcontroller as? UINavigationController, let setUpViewController = navigationController.viewControllers.first as? SetUpViewController {
