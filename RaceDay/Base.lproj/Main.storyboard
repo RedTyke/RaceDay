@@ -15,7 +15,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="FinishersViewController" id="dkh-F8-opo" customClass="FinishersViewController" customModule="RaceDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RFL-5w-9eB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -105,17 +105,17 @@
             <objects>
                 <viewController storyboardIdentifier="SetUpViewController" id="NgB-ub-fQe" customClass="SetUpViewController" customModule="RaceDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bqV-RW-yML">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Race:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxg-ix-tlb">
-                                <rect key="frame" x="100" y="164" width="175" height="36"/>
+                                <rect key="frame" x="100" y="100" width="175" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-dg-bVs">
-                                <rect key="frame" x="162" y="239" width="51" height="30"/>
+                                <rect key="frame" x="162" y="175" width="51" height="30"/>
                                 <state key="normal" title="Baildon"/>
                                 <connections>
                                     <action selector="baildonPressed:" destination="nwN-C1-Rxl" eventType="touchUpInside" id="a1L-eE-WJW"/>
@@ -123,7 +123,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twl-qr-mpl">
-                                <rect key="frame" x="145.5" y="300" width="84" height="30"/>
+                                <rect key="frame" x="145.5" y="236" width="84" height="30"/>
                                 <state key="normal" title="Queensbury"/>
                                 <connections>
                                     <action selector="queensburyPressed:" destination="nwN-C1-Rxl" eventType="touchUpInside" id="0Go-Mk-xGB"/>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY7-Q7-AOv">
-                                <rect key="frame" x="162" y="358" width="51" height="30"/>
+                                <rect key="frame" x="162" y="294" width="51" height="30"/>
                                 <state key="normal" title="Pudsey"/>
                                 <connections>
                                     <action selector="pudseyPressed:" destination="nwN-C1-Rxl" eventType="touchUpInside" id="sGf-GA-IBV"/>
@@ -139,7 +139,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isb-dy-R1f">
-                                <rect key="frame" x="144.5" y="418" width="86" height="30"/>
+                                <rect key="frame" x="144.5" y="354" width="86" height="30"/>
                                 <state key="normal" title="South Leeds"/>
                                 <connections>
                                     <action selector="southLeedsPressed:" destination="NgB-ub-fQe" eventType="touchUpInside" id="77Q-RP-XHE"/>
@@ -147,7 +147,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed6-Wd-XtX">
-                                <rect key="frame" x="148.5" y="478" width="78" height="30"/>
+                                <rect key="frame" x="148.5" y="414" width="78" height="30"/>
                                 <state key="normal" title="Crossgates"/>
                                 <connections>
                                     <action selector="crossgatesPressed:" destination="NgB-ub-fQe" eventType="touchUpInside" id="wnG-Q7-CVl"/>
@@ -182,15 +182,18 @@
         <!--Finishers-->
         <scene sceneID="gRS-bl-pL9">
             <objects>
-                <navigationController storyboardIdentifier="FinishersNavController" automaticallyAdjustsScrollViewInsets="NO" id="cyz-6z-oR7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FinishersNavController" automaticallyAdjustsScrollViewInsets="NO" id="cyz-6z-oR7" customClass="NavigationController" customModule="RaceDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Finishers" image="icons8-running-30" id="5B9-Ge-Xnm"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Rz5-Du-tUh">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Rz5-Du-tUh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -207,7 +210,7 @@
             <objects>
                 <tableViewController id="9Og-RA-AlM" customClass="TeamsTableViewController" customModule="RaceDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3zG-ME-b83">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -354,10 +357,11 @@
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="Lic-iC-6Qf" customClass="MainTabBarController" customModule="RaceDay" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xnX-Fe-1Wt">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="xnX-Fe-1Wt">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="cyz-6z-oR7" kind="relationship" relationship="viewControllers" id="PK8-UB-HcM"/>
@@ -375,8 +379,8 @@
                 <navigationController storyboardIdentifier="SetUpNavController" automaticallyAdjustsScrollViewInsets="NO" id="Aaf-gE-YlP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="uim-Qs-ttd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cnc-k5-ALL">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Cnc-k5-ALL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -391,12 +395,18 @@
         <!--Team Results-->
         <scene sceneID="zuK-yw-a14">
             <objects>
-                <navigationController storyboardIdentifier="TeamsNavController" automaticallyAdjustsScrollViewInsets="NO" id="fEl-cz-scO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TeamsNavController" automaticallyAdjustsScrollViewInsets="NO" id="fEl-cz-scO" customClass="NavigationController" customModule="RaceDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Team Results" image="icons8-leaderboard-filled-30" id="Sdi-JG-LRb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KLN-JO-djx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="KLN-JO-djx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

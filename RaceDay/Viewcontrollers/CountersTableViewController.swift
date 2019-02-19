@@ -58,7 +58,7 @@ class CountersTableViewController: UITableViewController {
     segments.center = self.view.center
     segments.layer.cornerRadius = 5
     segments.addTarget(self, action: #selector(segmentTouched), for: .valueChanged)
-    
+    segments.selectedSegmentIndex = 0
   }
   
   @objc func segmentTouched(_ sender: UISegmentedControl) {

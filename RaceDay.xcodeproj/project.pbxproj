@@ -36,6 +36,7 @@
 		20B60E1E21F4E91000348DB3 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B60E1A21F4E90F00348DB3 /* race.swift */; };
 		52590934221BFFE00093F3C3 /* Baildon.json in Resources */ = {isa = PBXBuildFile; fileRef = 52590933221BFFE00093F3C3 /* Baildon.json */; };
 		52590936221BFFFB0093F3C3 /* Crossgates.json in Resources */ = {isa = PBXBuildFile; fileRef = 52590935221BFFFB0093F3C3 /* Crossgates.json */; };
+		52590938221C14690093F3C3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52590937221C14690093F3C3 /* NavigationController.swift */; };
 		527EF39F21F4D94D007AFCAD /* FinisherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		20B60E1A21F4E90F00348DB3 /* race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
 		52590933221BFFE00093F3C3 /* Baildon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Baildon.json; path = ../../../../../Desktop/Baildon.json; sourceTree = "<group>"; };
 		52590935221BFFFB0093F3C3 /* Crossgates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Crossgates.json; sourceTree = "<group>"; };
+		52590937221C14690093F3C3 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinisherTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				20A578AF2210031900C85AA5 /* MainTabBarController.swift */,
+				52590937221C14690093F3C3 /* NavigationController.swift */,
 				2082B5BA21F383E30076DE6B /* FinishersViewController.swift */,
 				527EF39D21F4D94C007AFCAD /* FinisherTableViewCell.swift */,
 				203040AF2205709F00D1CCA2 /* TeamsTableViewController.swift */,
@@ -275,6 +278,7 @@
 				20A578AB220EF0A700C85AA5 /* FinishersDataSource.swift in Sources */,
 				20B21F3221FDD283002518AD /* FinishersDataModel.swift in Sources */,
 				203040B02205709F00D1CCA2 /* TeamsTableViewController.swift in Sources */,
+				52590938221C14690093F3C3 /* NavigationController.swift in Sources */,
 				527EF39F21F4D94D007AFCAD /* FinisherTableViewCell.swift in Sources */,
 				2082B5BB21F383E30076DE6B /* FinishersViewController.swift in Sources */,
 				20A578A4220EDDC800C85AA5 /* RunnersDataModel.swift in Sources */,

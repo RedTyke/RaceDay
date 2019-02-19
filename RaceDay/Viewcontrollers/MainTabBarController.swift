@@ -43,6 +43,13 @@ class MainTabBarController: UITabBarController, SetUpViewControllerDelegate {
     finishersDataModel.refreshFinisherData()
   }
  
-  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isOpaque = false
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 30)
+        ]
+    }
   
 }
