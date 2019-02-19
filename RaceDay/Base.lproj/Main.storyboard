@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lic-iC-6Qf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lic-iC-6Qf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.43"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,13 +77,13 @@
                                         <constraint firstItem="MjE-5B-dbD" firstAttribute="centerY" secondItem="Efr-9q-Igr" secondAttribute="centerY" id="EoH-g5-wPk"/>
                                         <constraint firstItem="JsS-Qs-FUp" firstAttribute="leading" secondItem="Efr-9q-Igr" secondAttribute="leading" constant="55" id="GBf-iH-wTs"/>
                                         <constraint firstAttribute="trailing" secondItem="H6f-xP-GNN" secondAttribute="trailing" constant="75" id="Gfj-0d-ytG"/>
-                                        <constraint firstItem="4bA-Jh-CId" firstAttribute="leading" secondItem="Bue-kH-oHG" secondAttribute="trailing" constant="5" id="LDa-xE-tkO"/>
                                         <constraint firstItem="H6f-xP-GNN" firstAttribute="centerY" secondItem="Efr-9q-Igr" secondAttribute="centerY" id="Lop-cT-qsn"/>
                                         <constraint firstAttribute="bottom" secondItem="4bA-Jh-CId" secondAttribute="bottom" constant="5" id="MMh-bQ-WPJ"/>
                                         <constraint firstItem="Bue-kH-oHG" firstAttribute="leading" secondItem="Efr-9q-Igr" secondAttribute="leading" constant="55" id="cwA-vk-Xhy"/>
                                         <constraint firstItem="H6f-xP-GNN" firstAttribute="leading" secondItem="MjE-5B-dbD" secondAttribute="trailing" constant="24.5" id="dqg-ae-tqR"/>
                                         <constraint firstAttribute="trailing" secondItem="yXW-UM-I6V" secondAttribute="trailing" constant="10" id="j2Q-cL-kT2"/>
                                         <constraint firstItem="JsS-Qs-FUp" firstAttribute="top" secondItem="Efr-9q-Igr" secondAttribute="top" constant="5" id="pEj-pT-S5e"/>
+                                        <constraint firstItem="4bA-Jh-CId" firstAttribute="leading" secondItem="Efr-9q-Igr" secondAttribute="leading" constant="90" id="teK-y9-xRH"/>
                                         <constraint firstItem="yXW-UM-I6V" firstAttribute="centerY" secondItem="Efr-9q-Igr" secondAttribute="centerY" id="y14-4B-zeB"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -396,7 +396,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFB-lQ-lax">
-                                            <rect key="frame" x="88.5" y="23.5" width="26" height="15"/>
+                                            <rect key="frame" x="90" y="23.5" width="26" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -413,10 +413,10 @@
                                         <constraint firstItem="nQs-HN-hHS" firstAttribute="leading" secondItem="wQ1-6D-jjg" secondAttribute="leading" constant="10" id="ZW0-RL-U9Z"/>
                                         <constraint firstAttribute="trailing" secondItem="a9j-F1-zIe" secondAttribute="trailing" constant="10" id="ZxB-qd-dGN"/>
                                         <constraint firstItem="grJ-LY-wtb" firstAttribute="centerY" secondItem="wQ1-6D-jjg" secondAttribute="centerY" id="ejD-tn-uYY"/>
-                                        <constraint firstItem="iFB-lQ-lax" firstAttribute="leading" secondItem="Rmg-Ha-hf6" secondAttribute="trailing" constant="5" id="fc6-CN-hDn"/>
                                         <constraint firstAttribute="trailing" secondItem="MMA-e3-smu" secondAttribute="trailing" constant="75" id="jhF-wG-Rzr"/>
                                         <constraint firstItem="Rmg-Ha-hf6" firstAttribute="leading" secondItem="wQ1-6D-jjg" secondAttribute="leading" constant="55" id="kuu-ot-dir"/>
                                         <constraint firstItem="nQs-HN-hHS" firstAttribute="centerY" secondItem="wQ1-6D-jjg" secondAttribute="centerY" id="nVi-C6-mKR"/>
+                                        <constraint firstItem="iFB-lQ-lax" firstAttribute="leading" secondItem="wQ1-6D-jjg" secondAttribute="leading" constant="90" id="tYH-de-2sU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

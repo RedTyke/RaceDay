@@ -27,7 +27,7 @@ class TeamsTableViewController: UITableViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    setUpNavBar()
     scoreModel.refreshData()
     filteredResults = scoreModel.getTeamResult(TeamResult.overall)
     self.tableView.reloadData()
